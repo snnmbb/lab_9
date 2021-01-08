@@ -7,7 +7,7 @@ int main(){
 	char grade;
 	cout << "Please input grade of each student (A-F) or input 0 to exit."<<"\n";
 	do{
-		cout << "Student [" << i << "]: ";
+		cout << "Student [" << i << "] : ";
 		cin >> grade; //The loop must be terminated when grade = '0'
 		if(grade=='A')// if grade is A
 		{
@@ -29,11 +29,6 @@ int main(){
 		{
 			count[4]++;
 		}
-		else if(grade=='0') // if grade is F
-		{
-			i--;
-			break;
-		}
 		else
 		{ // grade is wrong input
 			cout<<"Wrong input. Please input again."<<"\n";
@@ -41,6 +36,8 @@ int main(){
 		} 
 		i++;
 	}while(grade!='0');
+	
+	i--;
 	cout << "In total " <<i<< " students."<<"\n";
 	cout << "A = " << count[0] <<", ";
 	cout << "B = " << count[1] <<", ";
